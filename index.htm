@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Form Handler</title>
+  <link rel="stylesheet" href="images/form.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="scripts/form.js"></script>
+</head>
+<body>
+ <div class="form">
+  <div class="fInfo">This is a sample form.</div>
+  <form id="testForm" action="action.php" method="post">
+    <input type="hidden" name="id" id="id" value=""> <!-- optional, used for updating data -->
+
+    <fieldset>
+      <legend>Contact Information</legend>
+      <div>
+       <label for="fullname">Full Name:</label>
+        <div class="fiHelp">?<div>Alpha, dashes, periods only. Spaces okay.</div></div>
+        <input type="text" name="fullname" id="fullname" maxlength="50" value="">
+      </div>
+      <div>
+        <label for="nickname">Nickname:</label>
+        <div class="fiHelp">?<div>Alpha, dashes, periods only. Spaces okay.</div></div>
+        <input type="text" name="nickname" id="nickname" placeholder="Optional" maxlength="50" value="">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <div class="fiHelp">?<div>Ex. name@reachthesea.com</div></div>
+        <input type="text" name="email" id="email" maxlength="50" value="">
+      </div>
+    </fieldset>
+
+    <h3>Section 2</h3>
+    <div>
+      <label for="custom">Custom:</label>
+      <div class="fiHelp">?<div>Custom validation, must say 'John'.</div></div>
+      <input type="text" name="custom" id="custom" maxlength="50" value="">
+    </div>
+    <div class="fhb">
+      <label for="options">Options:</label>
+      <div class="fiHelp">?<div>Select two for more options.</div></div>
+      <select name="options" id="options">
+        <option value=""> </option>
+        <option value="Option One">Option One</option>
+        <option value="Option Two">Option Two</option>
+      </select>
+    </div>
+    <div class="options hide" title="Option Two">
+      <div>
+        <label for="details">Details:</label>
+        <div class="fiHelp">?<div>Letters, numbers, spaces, &amp; these symbols ! # $ ? ( ) . , - ' : +</div></div>
+        <input type="text" name="details" id="details" placeholder="Optional" maxlength="50" value="">
+      </div>
+    </div>
+    <div>
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" rows="50" cols=""></textarea>
+    </div>
+
+    <h3>Extras</h3>
+    <div class="fhb">
+      <label for="activate">Activate</label>
+      <input type="checkbox" name="activate" id="activate">
+    </div>
+    <div class="activate hide">
+      <p>The active textbox was selected.</p>
+    </div>
+
+    <div>
+      <p>Select Color:</p>
+
+      <input type="radio" name="color" id="color_red" value="Red" checked>
+      <label for="color_red">Red</label>
+
+      <input type="radio" name="color" id="color_blue" value="Blue">
+      <label for="color_blue">Blue</label>
+
+      <input type="radio" name="color" id="color_green" value="Green">
+      <label for="color_green">Green</label>
+
+      <input type="radio" name="color" id="color_orange" value="Orange">
+      <label for="color_orange">Orange</label>
+    </div>
+
+    <div class="gcb">
+      <p>Select all that apply:</p>
+      <div>
+        <input type="checkbox" name="gcb_optionOne" id="gcb_optionOne">
+        <label for="gcb_optionOne">Option 1</label>
+      </div>
+      <div>
+        <input type="checkbox" name="gcb_optionTwo" id="gcb_optionTwo">
+        <label for="gcb_optionTwo">Option 2</label>
+      </div>
+      <div>
+        <input type="checkbox" name="gcb_optionThree" id="gcb_optionThree">
+        <label for="gcb_optionThree">Option 3</label>
+      </div>
+      <div class="fhb">
+        <input type="checkbox" name="gcb_notlisted" id="gcb_notlisted">
+        <label for="gcb_notlisted">Not Listed</label>
+      </div>
+    </div>
+
+    <div class="gcb_notlisted hide">
+      <div>
+        <label for="more_info">More Info:</label>
+        <div class="fiHelp">?<div>More info for &quot;Not Listed&quot;</div></div>
+        <input type="text" name="more_info" id="more_info" maxlength="50" value="">
+  	  </div>
+    </div>
+
+    <div>
+      <input type="checkbox" name="terms" id="terms">
+      <label for="terms">I accept the terms of this agreement.</label>
+    </div>
+
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div class="fInfo">This is a sample form.</div>
+ </div>
+</body>
+</html>

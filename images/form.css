@@ -1,0 +1,141 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body, input, select { font: 1em Georgia, "Times New Roman", Times, serif; }
+
+/* form */
+
+.form {
+	width: 500px;
+	margin: 15px auto 0 15px;
+	line-height: 1.2em;
+}
+
+.form fieldset {
+	border: none;
+	background: #cdf;
+	border-radius: 3px;
+	margin: 1.2em 0 15px 0;
+}
+
+.form legend {
+	background: #cdf;
+	border-radius: 3px;
+	position: relative;
+	bottom: 8px;
+	padding: 5px 10px 3px 10px;
+}
+
+.form legend, .form h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+.form form > div, .form form fieldset > div, .form h3 { margin: 0 10px 15px 10px; }
+
+input, select, textarea {
+	border: 2px solid #999;
+	border-radius: 3px;
+	padding: 5px;
+}
+
+input:focus, select:focus, textarea:focus { border: 2px solid #09f; }
+
+.form input[type="text"], .form textarea { width: calc(100% - 14px); }
+
+.form input[type="radio"] { margin: 10px 0 0 10px; }
+
+.form select { width: 100%; }
+
+.form textarea { height: 60px; }
+
+.form button {
+	border: 1px solid #090;
+	background: #6C6;
+	padding: 5px 10px 5px 10px;
+	border-radius: 3px;
+	font-weight: bold;
+}
+
+.form button:hover {
+	color: #fff;
+	border: 1px solid #030;
+	background: #393;
+}
+
+/* Group CheckBox (GCB) */
+
+.gcb div {
+	display: inline-block;
+	margin: 10px 5px 0 5px;
+}
+
+.gcb div label {
+	display: block;
+  	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background: #FFF;
+	border: 2px solid #999;
+	border-radius: 3px;
+	padding: 0 10px 0 10px;
+}
+
+.gcb div label:hover {
+	border: 2px solid #09F;
+	cursor: pointer;
+}
+
+.gcb div label.checked {
+	border: 2px solid #09F;
+	background: #CDF;
+}
+
+.hide, .gcb input { display: none; }
+
+/* help popup */
+.fiHelp {
+	position: relative;
+	font-weight: bold;
+	display: inline;
+}
+
+.fiHelp:hover { cursor: pointer; }
+
+.fiHelp div {
+	position: absolute;
+	z-index: 10;
+	bottom: 1em;
+	left: -4em;
+	width: 215px;
+	background: #fff;
+	padding: 5px;
+	border: 2px solid #09f;
+	font-weight: normal;
+	border-radius: 3px;
+	display: none;
+}
+
+/* Messages */
+
+.fInfo { /* fInfo is a placeholder for eMsg, msg */
+	position: relative;
+	z-index: 10;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.eMsg, .msg {
+	font-weight: bold;
+	color: #fff;
+}
+
+.eMsg { background: #c33; }
+
+.msg { background: #06c; }
+
+.fiError { color: #f00; }
